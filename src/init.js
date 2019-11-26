@@ -32,6 +32,27 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
   
+  $('.addJigglyButton').on('click', function(event){
+    
+    var dancer = new jigglyDance(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000
+    );
+    $('body').append(dancer.$node);
+  });
+ 
+  //salsa Dance
+   $('.addSalsalyButton').on('click', function(event){     
+    var dancer = new salsaDance(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      $('body').append("<img src=https://ak7.picdn.net/shutterstock/videos/3193627/thumb/1.jpg>"),
+      Math.random() * 1000
+    );
+    $('body').append(dancer.$node);
+  });
+  }); 
 
-});
+
 
